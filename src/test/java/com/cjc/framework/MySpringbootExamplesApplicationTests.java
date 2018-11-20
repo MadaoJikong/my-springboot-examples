@@ -1,4 +1,4 @@
-package com.cjc.myspringbootexamples;
+package com.cjc.framework;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

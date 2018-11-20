@@ -1,4 +1,4 @@
-package com.cjc.myspringbootexamples;
+package com.cjc.framework;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
