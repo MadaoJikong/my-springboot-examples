@@ -1,0 +1,25 @@
+-- 这是第一个库 one 的表
+CREATE TABLE `user_one` (
+  `id` bigint(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `uuid` varchar(32) NOT NULL COMMENT '接口幂等性',
+  `name` varchar(256) NOT NULL COMMENT '姓名',
+  `status` int(11) NOT NULL DEFAULT '0' COMMENT '状态',
+  `is_delete` bit(1) NOT NULL DEFAULT b'1' COMMENT '删除状态  1删除 0正常',
+  `creator` bigint(11) NOT NULL COMMENT '创建人',
+  `created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `updated` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '最后一次更新时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4
+
+-- 这是第二个库 two 的表
+CREATE TABLE `user_two` (
+  `id` bigint(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `uuid` varchar(32) NOT NULL COMMENT '接口幂等性',
+  `name` varchar(256) NOT NULL COMMENT '姓名',
+  `status` int(11) NOT NULL DEFAULT '0' COMMENT '状态',
+  `is_delete` bit(1) NOT NULL DEFAULT b'1' COMMENT '删除状态  1删除 0正常',
+  `creator` bigint(11) NOT NULL COMMENT '创建人',
+  `created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `updated` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '最后一次更新时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4
